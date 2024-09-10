@@ -16,9 +16,9 @@ jobs:
           pip install pyinstaller      
       - name: Build executable
         run: |
-          pyinstaller --onefile main.py
+          pyinstaller --onefile --distpath /home/runner/work/Onekey/Onekey/ main.py
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
           name: exe
-          path: /home/runner/work/Onekey/Onekey/dist/main.exe
+          path: /home/runner/work/Onekey//Onekey/main.exe
