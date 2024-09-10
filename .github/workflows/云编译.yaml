@@ -13,10 +13,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pyinstaller      
+          pip install pyinstaller
+          sudo apt-get install mingw-w64 
       - name: Build executable
         run: |
-          pyinstaller -F main.py
+          pyinstaller --onefile --target-arch=win64 main.py
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
