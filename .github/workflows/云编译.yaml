@@ -21,4 +21,4 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: exe
-          path: /home/runner/work/Onekey/Onekey/dist/main
+          path: /home/runner/work/Onekey/dist/main.exe
