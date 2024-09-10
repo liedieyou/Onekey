@@ -11,10 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: Install dependencies
-        run: pip install -r requirements.txt
-              pip install pyinstaller      
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller      
       - name: Build executable
-        run: pyinstaller --onefile main.py
+        run: |
+          pyinstaller --onefile main.py
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
