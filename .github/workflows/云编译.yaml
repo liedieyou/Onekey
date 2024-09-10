@@ -16,7 +16,7 @@ jobs:
           pip install pyinstaller      
       - name: Build executable
         run: |
-          pyinstaller --onefile main.py
+          pyinstaller --onefile --windowed --target-architecture win64 main.py
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
